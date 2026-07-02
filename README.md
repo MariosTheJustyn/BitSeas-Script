@@ -1,0 +1,2 @@
+# BitSeas-Script
+Bitseas Script
