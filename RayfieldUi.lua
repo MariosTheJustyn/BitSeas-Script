@@ -20,14 +20,14 @@ local Window = Rayfield:CreateWindow({
    KeySystem = false,
 })
 
--- ✅ Tabs MUST be outside the window table
+-- TAB
 local Tab = Window:CreateTab("Instant Train", 4483362458)
 
-local Button = Tab:CreateButton({
+-- BUTTON 1
+local Button1 = Tab:CreateButton({
    Name = "Instant Train Conqueror Haki",
    Callback = function()
-      local Event = game:GetService("ReplicatedStorage")
-         .BitPiece.Remotes.Action
+      local Event = game:GetService("ReplicatedStorage").BitPiece.Remotes.Action
 
       Event:FireServer(
          "train",
@@ -38,6 +38,22 @@ local Button = Tab:CreateButton({
             id = "haki:Conqueror",
             boost = 9988899999999,
             ticks = 100
+         }
+      )
+   end
+})
+
+-- BUTTON 2
+local Button2 = Tab:CreateButton({
+   Name = "Instant Train Observation Haki",
+   Callback = function()
+      local Event = game:GetService("ReplicatedStorage").BitPiece.Remotes.Action
+
+      Event:FireServer(
+         "train",
+         {
+            id = "haki:Observation",
+            boost = 9999
          }
       )
    end
