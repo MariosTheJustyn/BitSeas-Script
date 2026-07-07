@@ -104,3 +104,16 @@ Tab:CreateButton({
         })
     end
 })
+
+--// Button 7 - Style
+Tab:CreateButton({
+    Name = "Instant Train Style",
+    Callback = function()
+        local Event = game:GetService("ReplicatedStorage").BitPiece.Remotes.Action
+
+        Event:FireServer("train", {
+            id = "style",
+            boost = 999
+        })
+    end
+})
