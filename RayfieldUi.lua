@@ -20,7 +20,7 @@ local Window = Rayfield:CreateWindow({
     KeySystem = false,
 })
 
---// Tab
+--// Instant Train Tab
 local Tab = Window:CreateTab("Instant Train", 4483362458)
 
 --// Button 1 - Conqueror Haki
@@ -62,6 +62,45 @@ Tab:CreateButton({
         Event:FireServer("train", {
             id = "haki:Armament",
             boost = 999
+        })
+    end
+})
+
+--// Button 4 - Fruit
+Tab:CreateButton({
+    Name = "Instant Train Fruit",
+    Callback = function()
+        local Event = game:GetService("ReplicatedStorage").BitPiece.Remotes.Action
+
+        Event:FireServer("train", {
+            id = "fruit",
+            boost = 999
+        })
+    end
+})
+
+--// Button 5 - Speed
+Tab:CreateButton({
+    Name = "Instant Train Speed",
+    Callback = function()
+        local Event = game:GetService("ReplicatedStorage").BitPiece.Remotes.Action
+
+        Event:FireServer("train", {
+            id = "speed",
+            boost = 999
+        })
+    end
+})
+
+--// Button 6 - Strength
+Tab:CreateButton({
+    Name = "Instant Train Strength",
+    Callback = function()
+        local Event = game:GetService("ReplicatedStorage").BitPiece.Remotes.Action
+
+        Event:FireServer("train", {
+            id = "strength",
+            boost = 1
         })
     end
 })
